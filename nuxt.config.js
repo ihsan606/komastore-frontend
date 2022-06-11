@@ -7,19 +7,31 @@ export default {
   ssr: true,
 
   loading: {
-    color: "white", // <-- color
-    height: "5px", // <-- height
+    color: "white",
+    // <-- color
+    height: "5px",
+    // <-- height
   },
+
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "frontend-ecommerce",
+    title: "nuxt-ecommerce",
     htmlAttrs: {
       lang: "en",
     },
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" },
+      {
+        charset: "utf-8",
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1",
+      },
+      {
+        hid: "description",
+        name: "description",
+        content: "",
+      },
     ],
     link: [
       {
@@ -40,13 +52,41 @@ export default {
       { src: "/js/coreui.bundle.min.js" },
       {
         src: "https://app.sandbox.midtrans.com/snap/snap.js",
-        "data-client-key": "paste_client_Key_midtrans_disini",
+        "data-client-key": "SB-Mid-client-bWcHM3-QSyGV2hhw",
       },
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/assets/css/style.min.css", "@/assets/css/custom.css"],
+  css: [
+    { src: "@/assets/sass/bootstrap.min.css" },
+    {
+      src: "@/assets/sass/dark.scss",
+    },
+    {
+      src: "~/assets/sass/main.scss",
+      lang: "scss",
+    },
+    {
+      src: "@/assets/css/style.min.css",
+      lang: "css",
+    },
+    {
+      src: "@/assets/css/custom.css",
+      lang: "css",
+    },
+    { src: "@/assets/sass/structure.scss" },
+
+    {
+      src: "@/assets/sass/tables/table-custom.scss",
+    },
+    { src: "@/assets/sass/style.scss" },
+    // { src: '@/assets/sass/apps/mailbox.scss' },
+    { src: "@/assets/sass/main.scss" },
+    { src: "@/assets/sass/custom-loader.css" },
+    { src: "@/assets/sass/animate.css" },
+    { src: "@/assets/sass/authentication/auth-boxed.scss" },
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -63,7 +103,73 @@ export default {
     "bootstrap-vue/nuxt",
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    //https://dev.auth.nuxtjs.org/
+    "@nuxtjs/auth-next",
   ],
+
+  auth: {
+    strategies: {
+      //strategy "admin"
+      admin: {
+        scheme: "local",
+        token: {
+          property: "token",
+          required: true,
+          type: "Bearer",
+        },
+        user: {
+          property: "user",
+          // autoFetch: true
+        },
+        endpoints: {
+          login: {
+            url: "/api/admin/login",
+            method: "post",
+            propertyName: "token",
+          },
+          logout: {
+            url: "/api/admin/logout",
+            method: "post",
+          },
+          user: {
+            url: "/api/admin/user",
+            method: "get",
+            propertyName: "user",
+          },
+        },
+      },
+
+      //strategy "customer"
+      customer: {
+        scheme: "local",
+        token: {
+          property: "token",
+          required: true,
+          type: "Bearer",
+        },
+        user: {
+          property: "user",
+          // autoFetch: true
+        },
+        endpoints: {
+          login: {
+            url: "/api/customer/login",
+            method: "post",
+            propertyName: "token",
+          },
+          logout: {
+            url: "/api/customer/logout",
+            method: "post",
+          },
+          user: {
+            url: "/api/customer/user",
+            method: "get",
+            propertyName: "user",
+          },
+        },
+      },
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
