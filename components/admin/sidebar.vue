@@ -2,7 +2,8 @@
     <ul class="c-sidebar-nav">
         <li class="c-sidebar-nav-item">
             <nuxt-link :to="{
-             name: 'admin-dashboard'}" class="c-sidebar-nav-link" href="index.html">
+                name: 'admin-dashboard'
+            }" class="c-sidebar-nav-link" href="index.html">
                 <svg class="c-sidebar-nav-icon">
                     <use xlink:href="@/node_modules/@coreui/icons/sprites/free.svg#cil-speedometer"></use>
                 </svg> Dashboard
@@ -22,7 +23,7 @@
         <li class="c-sidebar-nav-title">ORDERS</li>
         <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link">
                 <svg class="c-sidebar-nav-icon">
-                    
+
                     <use xlink:href="@/node_modules/@coreui/icons/sprites/free.svg#cil-cart"></use>
                 </svg> Invoices</a>
         </li>
@@ -32,10 +33,12 @@
                     <use xlink:href="@/node_modules/@coreui/icons/sprites/free.svg#cil-user"></use>
                 </svg> Customers</a>
         </li>
-        <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link">
+        <li class="c-sidebar-nav-item">
+            <nuxt-link :to="{ name: 'admin-sliders' }" class="c-sidebar-nav-link">
                 <svg class="c-sidebar-nav-icon">
                     <use xlink:href="@/node_modules/@coreui/icons/sprites/free.svg#cil-laptop"></use>
-                </svg> Sliders</a>
+                </svg> Sliders
+            </nuxt-link>
         </li>
         <li class="c-sidebar-nav-item"><a href="#" class="c-sidebar-nav-link">
                 <svg class="c-sidebar-nav-icon">
@@ -52,6 +55,6 @@ export default {
 
 <style scoped>
 a.nuxt-link-active {
-       background: rgba(255,255,255,.05)!important;
+    background: rgba(255, 255, 255, .05) !important;
 }
 </style>
