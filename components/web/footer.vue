@@ -14,8 +14,8 @@
             "
           />
           <p>
-            Mi Store Official Terpercaya di Indonesia. Jual Beli Aman &amp;
-            Harga Termurah! Belanja sekarang.
+            KOMA Store Official Terpercaya di Indonesia. Jual Beli Aman &amp;
+            Harga Termurah! Belanja Bahan Bangunan sekarang.
           </p>
         </div>
         <div class="col-md-3 mb-4">

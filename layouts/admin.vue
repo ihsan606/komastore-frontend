@@ -9,11 +9,11 @@
         style="background-color: #faae16"
       >
         <img
-          src="/images/xiaomi.png"
+          src="/images/logo.png"
           class="bg-light rounded shadow-sm p-2"
           width="35"
         />
-        <span class="ml-2 font-weight-bold">MI STORE</span>
+        <span class="ml-2 font-weight-bold">KOMA STORE</span>
       </div>
 
       <!-- sidebar -->

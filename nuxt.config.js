@@ -100,7 +100,27 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: [
+    "@nuxtjs/pwa",
+    // <-- register PWA
+  ],
+
+  pwa: {
+    meta: {
+      title: "KOMA STORE - TOKO BANGUNAN",
+      author: "KOMA STORE Indonesia",
+    },
+    manifest: {
+      name: "KOMA",
+      short_name: "Koma",
+      description: "Official Toko Online Penjualan Produk Bangunan",
+      lang: "en",
+    },
+    icon: {
+      fileName: "images/logo.png",
+      sizes: [64, 120, 144, 152, 192, 384, 512],
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
