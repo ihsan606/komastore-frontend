@@ -107,6 +107,11 @@ a.nuxt-link-active > svg {
   color: #030305 !important;
 }
 
+.c-sidebar.c-sidebar-light .c-sidebar-nav-dropdown-toggle:hover,
+.c-sidebar.c-sidebar-light .c-sidebar-nav-link:hover {
+  background-color: #faae16;
+}
+
 a.c-sidebar-nav-link {
   font-family: "Nunito", sans-serif;
   cursor: pointer;

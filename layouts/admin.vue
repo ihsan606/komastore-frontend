@@ -4,7 +4,10 @@
       class="c-sidebar c-sidebar-light c-sidebar-fixed c-sidebar-lg-show"
       id="sidebar"
     >
-      <div class="c-sidebar-brand d-lg-down-none">
+      <div
+        class="c-sidebar-brand d-lg-down-none"
+        style="background-color: #faae16"
+      >
         <img
           src="/images/xiaomi.png"
           class="bg-light rounded shadow-sm p-2"
@@ -54,4 +57,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.c-sidebar-nav-link:hover {
+  background-color: #faae16;
+}
+</style>

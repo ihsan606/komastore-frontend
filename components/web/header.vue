@@ -49,7 +49,10 @@
         </div>
       </div>
     </section>
-    <nav class="navbar navbar-expand-md navbar-main border-bottom p-2">
+    <nav
+      class="navbar navbar-expand-md navbar-main border-bottom p-2"
+      style="background-color: #fff"
+    >
       <div class="container-fluid">
         <div class="d-md-none my-2">
           <div class="input-group">
