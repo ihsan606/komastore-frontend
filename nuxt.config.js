@@ -81,15 +81,20 @@ export default {
       src: "@/assets/sass/tables/table-custom.scss",
     },
     { src: "@/assets/sass/style.scss" },
-    // { src: '@/assets/sass/apps/mailbox.scss' },
+    { src: "@/assets/sass/apps/mailbox.scss" },
     { src: "@/assets/sass/main.scss" },
     { src: "@/assets/sass/custom-loader.css" },
     { src: "@/assets/sass/animate.css" },
     { src: "@/assets/sass/authentication/auth-boxed.scss" },
+    // { src: "@/assets/sass/" },
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: "~/plugins/vue-star-rating.js", mode: "client" },
+    { src: "~/plugins/chart.js", mode: "client" },
+    { src: "~/plugins/mixins.js" },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -105,6 +110,8 @@ export default {
     "@nuxtjs/axios",
     //https://dev.auth.nuxtjs.org/
     "@nuxtjs/auth-next",
+    //https://github.com/avil13/vue-sweetalert2
+    "vue-sweetalert2/nuxt",
   ],
 
   auth: {
@@ -173,7 +180,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: "http://localhost:8000",
+    baseURL: "https://komastore.mthq.ponpes.id",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
