@@ -178,6 +178,10 @@ export default {
     },
   },
 
+  generate: {
+    dir: "public",
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     baseURL: "https://komastore.mthq.ponpes.id",
