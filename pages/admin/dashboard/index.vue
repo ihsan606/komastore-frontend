@@ -245,6 +245,7 @@ export default {
       success: dashboard.data.count.success,
       expired: dashboard.data.count.expired,
       failed: dashboard.data.count.failed,
+      todays_profit : dashboard.data.count.todays_sales,
     };
 
     //cart
