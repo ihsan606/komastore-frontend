@@ -169,7 +169,7 @@
                         font-size: 25px;
                       "
                     >
-                      Rp. 1,254,345.00
+                       Rp. {{formatPrice(statistic.total_profit)}}
                     </p>
                   </div>
                 </div>
@@ -246,6 +246,7 @@ export default {
       expired: dashboard.data.count.expired,
       failed: dashboard.data.count.failed,
       todays_profit : dashboard.data.count.todays_sales,
+      total_profit: dashboard.data.count.sum_profit,
     };
 
     //cart
