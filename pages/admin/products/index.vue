@@ -77,6 +77,11 @@
             key: 'stock',
             tdClass: 'text-center'
           },
+             {
+            label: 'Rating',
+            key: 'rating',
+            tdClass: 'text-center'
+          },
           {
             label: 'Actions',
             key: 'actions',
