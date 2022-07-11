@@ -148,7 +148,7 @@
                         font-size: 25px;
                       "
                     >
-                      Rp. 400,000.00
+                      Rp. {{formatPrice(statistic.todays_profit)}}
                     </p>
                   </div>
                 </div>
