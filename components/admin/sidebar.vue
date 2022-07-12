@@ -44,7 +44,7 @@
     <li class="c-sidebar-nav-item">
       <nuxt-link :to="{ name: 'admin-invoices' }" class="c-sidebar-nav-link">
         <svg
-          class="c-sidebar-nav-icon"
+          class="c-sidebar-nav-icon mr-2"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
